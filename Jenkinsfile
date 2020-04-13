@@ -1,7 +1,7 @@
 pipeline {
   agent {
     node {
-      label 'docker'
+      label 'kubernetes'
     }
 
   }
@@ -9,7 +9,7 @@ pipeline {
     stage('Build & Test') {
       agent {
         node {
-          label 'docker'
+          label 'kubernetes'
         }
 
       }
@@ -24,7 +24,7 @@ pipeline {
         stage('Report & Publish') {
           agent {
             node {
-              label 'docker'
+              label 'kubernetes'
             }
 
           }
